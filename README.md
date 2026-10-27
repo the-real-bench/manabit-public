@@ -4,7 +4,7 @@
 
 A cozy builder-battler roguelite. You're an Artificer: you crack open coffers of sleeping scrap, assemble a wind-up toy construct called a **Manabit** from six parts (head, core, two arms, legs, back), bind it, then spar, wager it in bouts, or carry it down a branching venture road. Lose a fight and the victor salvages your parts; lose your core on the road and the Manabit is gone. Win and you loot theirs.
 
-- 100-bit catalog across 17 style families, each with its own stats and abilities; 80 have hand-built procedural low-poly 3D models, the rest use placeholder meshes
+- A catalog of bits across 17 style families, each with its own stats and abilities, most with procedurally built low-poly 3D models
 - Turn-based, part-targeted combat: break an arm and it falls off; aim for the core to end it
 - Two-currency economy (Scrap and Glimmer) with a broker, daily finds and a melt/distill loop
 - Procedurally synthesized sound effects, ambience and a four-stem adaptive music box
