@@ -1,0 +1,24 @@
+name: tests
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  headless:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Godot
+        run: |
+          curl -sSL -o godot.zip https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip
+          unzip -q godot.zip && mv Godot_v4.6.1-stable_linux.x86_64 /usr/local/bin/godot
+      - name: Import
+        run: godot --headless --path . --import || true
+      - name: Run all gates
+        run: |
+          red=0
+          for g in $(ls tests/smoke_*.gd | xargs -n1 basename | sed 's/\.gd$//' | sort); do
+            if godot --headless --path . --script "res://tests/$g.gd" > "out_$g.txt" 2>&1; then
+              echo "green $g"
+            else
+              echo "RED   $g"; tail -20 "out_$g.txt"; red=1
+            fi
+          done
+          exit $red

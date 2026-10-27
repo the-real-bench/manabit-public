@@ -161,7 +161,7 @@ GREED_LAST_CORE = 0.15           # chance to venture the LAST core without a 60-
 SCRAP_RESERVE = 60               # players guard one Binding's worth before coffer shopping
 
 ASSUMPTIONS = [
-    "Fight outcomes are drawn from priors, not re-simulated: own-build node0 0.95 / elite 0.60 / boss 0.50 (lane brief); kit per-grade bands anchored to smoke_kit_sim gates + CLAUDE.md measured numbers (Gleaming elite 0.88 / boss 0.83, node0 >= 0.90 with zero deaths, Dud boss <= 0.15).",
+    "Fight outcomes are drawn from priors, not re-simulated: own-build node0 0.95 / elite 0.60 / boss 0.50 (lane brief); kit per-grade bands anchored to smoke_kit_sim gate measurements (Gleaming elite 0.88 / boss 0.83, node0 >= 0.90 with zero deaths, Dud boss <= 0.15).",
     "Death-given-loss on core-hunting nodes: kit 0.75, own-build 0.70 (elite/boss aim the core; node0 never kills).",
     "2-4 sessions/day (uniform). Each session runs one Box of Scrap; an eligible session also mounts an own-build venture with p=0.5.",
     "Kit stop policy is grade-aware (grade is revealed at crack): Dud banks after node0 (greed 0.15), Rough presses elite at 0.50 / boss 0.20, Fair elite always / boss 0.35, Keen boss 0.80, Gleaming always presses.",

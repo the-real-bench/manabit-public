@@ -1,8 +1,10 @@
 # MANABIT
 
+[![tests](https://github.com/the-real-bench/manabit-public/actions/workflows/tests.yml/badge.svg)](https://github.com/the-real-bench/manabit-public/actions/workflows/tests.yml)
+
 A cozy builder-battler roguelite. You're an Artificer: you crack open coffers of sleeping scrap, assemble a wind-up toy construct called a **Manabit** from six parts (head, core, two arms, legs, back), bind it, then spar, wager it in bouts, or carry it down a branching venture road. Lose a fight and the victor salvages your parts; lose your core on the road and the Manabit is gone. Win and you loot theirs.
 
-- 100-bit catalog across 17 style families, each part a procedurally built low-poly 3D model with its own stats and abilities
+- 100-bit catalog across 17 style families, each with its own stats and abilities; 80 have hand-built procedural low-poly 3D models, the rest use placeholder meshes
 - Turn-based, part-targeted combat: break an arm and it falls off; aim for the core to end it
 - Two-currency economy (Scrap and Glimmer) with a broker, daily finds and a melt/distill loop
 - Procedurally synthesized sound effects, ambience and a four-stem adaptive music box
@@ -39,7 +41,7 @@ Note: the persistence gate writes the game's save file (`user://manabit_save.jso
 ## Layout
 
 ```
-combat/    turn-based, part-targeted combat resolver + AI
+combat/    turn-based, part-targeted combat resolver + enemy logic
 economy/   pack/box rollers, broker
 manabits/  the build session (assemble/equip rules)
 meta/      player state, save manager, run state
@@ -49,5 +51,7 @@ audio/ art/  generated sounds, meshes, icons
 ```
 
 ## License
+
+History was squashed into a single commit for the public release.
 
 Copyright © ptbench Studios. All rights reserved. The code is public to read; no license is granted to copy, modify or distribute it.
